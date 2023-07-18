@@ -1,0 +1,13 @@
+.container-fluid{
+    background-color: rgb(226, 226, 226);
+    position: absolute;
+    margin-left: -12px;
+}
+
+.btn{
+    width: 100%;
+}
+
+.rw-btn{
+    place-content: center;
+}
