@@ -1,1 +1,19 @@
-<p>register works!</p>
+<div class="container-fluid">
+    <div class="row text-left">
+        <div class="col cl-form">
+            <h3>Sign up</h3>
+            <p class="my-3">Email:</p>
+            <input type="email" placeholder="example@gmail.com" id="email" [(ngModel)]="email">
+            <p class="my-3">Password:</p>
+            <input type="password" id="password" [(ngModel)]="password">
+            <p class="my-3">Repeat password:</p>
+            <input type="password" id="passwordValidation" [(ngModel)]="passwordValid">
+            <div>
+                <div class="btn btn-primary px-3 my-4" (click)="validateUser()">Crear Usuario</div>
+            </div>
+            <div class="col-9 text-center">
+                <a routerLink="/login">Do you have an account? Log in</a>
+            </div>
+        </div>
+    </div>
+</div>

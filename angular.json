@@ -91,6 +91,13 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2,
+            "browserTarget": "jdsc-fe-gc-angular-pokeapi-07-2023:build:production"
+          }
         }
       }
     }

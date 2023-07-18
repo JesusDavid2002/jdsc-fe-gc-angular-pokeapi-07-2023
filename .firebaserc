@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pokeapi-20235": {
+      "hosting": {
+        "jdsc-fe-gc-angular-pokeapi-07-2023": [
+          "pokeapi-20235"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pokeapi-20235"
+  }
+}

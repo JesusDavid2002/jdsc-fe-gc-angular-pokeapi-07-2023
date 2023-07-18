@@ -6,23 +6,27 @@ import { PokemonDetailsComponent } from './components/pokemon/pokemon-details/po
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
-
+import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    ...canActivate(() => redirectUnauthorizedTo('/login'))
   },
   {
     path: 'list-pokemon',
-    component: PokemonListComponent
+    component: PokemonListComponent,
+    ...canActivate(() => redirectUnauthorizedTo('/login'))
   },
   {
     path: 'details/:id',
-    component: PokemonDetailsComponent
+    component: PokemonDetailsComponent,
+    ...canActivate(() => redirectUnauthorizedTo('/login'))
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    ...canActivate(() => redirectUnauthorizedTo('/login'))
   },
   {
     path: 'login',

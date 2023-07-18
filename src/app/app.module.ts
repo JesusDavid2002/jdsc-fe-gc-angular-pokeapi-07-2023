@@ -12,6 +12,10 @@ import { PokemonListComponent } from './components/pokemon/pokemon-list/pokemon-
 import { PokemonDetailsComponent } from './components/pokemon/pokemon-details/pokemon-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonCardComponent } from './components/pokemon/pokemon-card/pokemon-card.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,10 @@ import { PokemonCardComponent } from './components/pokemon/pokemon-card/pokemon-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
   ],
   providers: [],
   bootstrap: [AppComponent]

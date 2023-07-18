@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div class="container-fluid">
+    <div class="row text-left">
+        <div class="col cl-form">
+            <h3>Log in</h3>
+            <p class="my-3">Email:</p>
+            <input type="email" placeholder="example@gmail.com" id="email" [(ngModel)]="email">
+            <p class="my-3">Password:</p>
+            <input type="password" id="password" [(ngModel)]="password">
+            <div class="col-8 d-flex mx-3 my-3">
+                <div class="btn btn-primary mx-2" (click)="inicarSesion()">Log In</div>
+                <div class="btn btn-primary mx-2" (click)="inicarSesionGoogle()">Log In with Google</div>
+            </div>
+            <div class="col-9 text-center my-5">
+                <a routerLink="/register">Do you have not an account? Sign Up</a>
+            </div>
+        </div>
+    </div>
+</div>
