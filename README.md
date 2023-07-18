@@ -1,3 +1,19 @@
+- Login/Registro:
+
+![image](https://github.com/JesusDavid2002/jdsc-fe-gc-angular-pokeapi-07-2023/assets/82532848/e74a8cb4-831c-4d84-a050-433e103dbe2f)
+
+- Home:
+  
+![image](https://github.com/JesusDavid2002/jdsc-fe-gc-angular-pokeapi-07-2023/assets/82532848/4dc6e181-e681-44e0-85b2-c69a3fafb8c1)
+
+- Lista de Pokemons:
+  
+![image](https://github.com/JesusDavid2002/jdsc-fe-gc-angular-pokeapi-07-2023/assets/82532848/1fb03b1e-898e-451a-a3a1-8a5cadb8ffbf)
+
+- Vista de detalles:
+
+![image](https://github.com/JesusDavid2002/jdsc-fe-gc-angular-pokeapi-07-2023/assets/82532848/875c2686-5743-42f9-bb08-a228ba883b3d)
+
 # JdscFeGcAngularPokeapi072023
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
