@@ -4,7 +4,7 @@
             <div class="col-2"></div>
             <div class="col-4">
                 <div *ngIf="pokemon">
-                    <h1 class="my-3">{{ pokemon.name }}</h1>
+                    <h1 class="my-3">{{ pokemon.name | titlecase}}</h1>
                     <p class="my-3">Id: {{ pokemon.id }}</p>     
                     <p class="my-3">Types: 
                         <ng-container *ngIf="pokemon.types.length === 1">

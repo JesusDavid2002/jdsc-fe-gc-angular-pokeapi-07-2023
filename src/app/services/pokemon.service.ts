@@ -15,19 +15,40 @@ export class PokemonService {
 
   constructor(private http: HttpClient) { }
 
+  // Devuelve un pokemon mediante su id
   getById(id: number): Observable<Pokemon>{ 
     return this.http.get<Pokemon>(this.baseUrl + id);       
   }
   
+  // Devuelve una generacion de un pokemon
   getByIdGen(id: number): Observable<Pokemon>{ 
     return this.http.get<Pokemon>(this.baseUrlGeneration + id);       
   }
 
+  // Devuelve un pokemon mediante su nombre
+  getByName(name: string): Observable<Pokemon>{
+    return this.http.get<Pokemon>(this.baseUrl + name)
+  }
+
+  // Genera un número aleatorio
   randomId(){
     let idRandom = (Math.floor(Math.random()*1000)+1);
     return idRandom;
   }
+  
+  // Recoge el número aleatorio, si ya a salido busca otro y los mete en pokemonId
+  randomPokemons(): number[]{
+    let pokemonId: number[] = [];
 
+    for (let i = 0; i < 8; i++) {
+      if(!pokemonId.includes(this.randomId())){
+        pokemonId.push(this.randomId());
+      }
+    }
+    return pokemonId;
+  }
+  
+  // Recoge el array del método anterior, y va objeto a objeto para poder recoger los datos de la API y introducirlos en el array pokemons
   getRandomPokemons(): Pokemon[]{
     let arrayRandomPokemons: number[] = this.randomPokemons();
     let pokemons : Pokemon[] = [];
@@ -40,16 +61,5 @@ export class PokemonService {
       
     }
     return pokemons;
-  } 
-
-  randomPokemons(): number[]{
-    let pokemonId: number[] = [];
-
-    for (let i = 0; i < 8; i++) {
-      if(!pokemonId.includes(this.randomId())){
-        pokemonId.push(this.randomId());
-      }
-    }
-    return pokemonId;
-  }
+  }   
 }

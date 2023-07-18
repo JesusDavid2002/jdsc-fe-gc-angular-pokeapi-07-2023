@@ -18,8 +18,8 @@
                 </li>
             </ul>
             <form class="d-flex" role="search">
-                <input class="form-control mx-2" type="search" placeholder="Search">
-                <button class="btn btn-outline-light" type="submit">Search</button>
+                <input class="form-control mx-2" type="search" placeholder="Search by Name" [(ngModel)]="name" name="name">
+                <button class="btn btn-outline-light" type="submit" (click)="search()">Search</button>
             </form>
             <div class="btn btn-outline-light mx-2" (click)="LogOut()">Log Out</div>
         </div>

@@ -7,6 +7,14 @@ h3{
     font-weight: bold;
 }
 
+.cl-img{
+    background: url(../../../../assets/pokemon-first-partners-i112548.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    height: 100vh;
+}
+
 .cl-form{
     margin-top: 15vh;
     margin-left: 30vw;
@@ -28,5 +36,8 @@ a{
 @media (max-width: 750px){
     .cl-form{
         margin-left: 0;
+    }
+    .cl-img{
+        display: none;
     }
 }
