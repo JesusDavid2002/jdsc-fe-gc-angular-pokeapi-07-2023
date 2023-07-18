@@ -10,12 +10,17 @@ import { forkJoin, Observable } from 'rxjs';
 export class PokemonService {
 
   baseUrl: string = 'https://pokeapi.co/api/v2/pokemon/';
+  baseUrlGeneration: string = 'https://pokeapi.co/api/v2/pokemon-species/';
   arrayRandoms: any = [];
 
   constructor(private http: HttpClient) { }
 
   getById(id: number): Observable<Pokemon>{ 
     return this.http.get<Pokemon>(this.baseUrl + id);       
+  }
+  
+  getByIdGen(id: number): Observable<Pokemon>{ 
+    return this.http.get<Pokemon>(this.baseUrlGeneration + id);       
   }
 
   randomId(){

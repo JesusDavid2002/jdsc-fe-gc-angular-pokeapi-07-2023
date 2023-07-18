@@ -1,1 +1,30 @@
-<p>pokemon-details works!</p>
+<app-navbar>
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-4">
+                <div *ngIf="pokemon">
+                    <h1 class="my-3">{{ pokemon.name }}</h1>
+                    <p class="my-3">Id: {{ pokemon.id }}</p>     
+                    <p class="my-3">Types: 
+                        <ng-container *ngIf="pokemon.types.length === 1">
+                            <span>{{ pokemon.types[0].type.name | titlecase }}</span>
+                        </ng-container> 
+                        <ng-container *ngIf="pokemon.types.length === 2">
+                            <span>{{ pokemon.types[0].type.name | titlecase }}, {{pokemon.types[1].type.name | titlecase}}</span>
+                        </ng-container>
+                    </p> 
+                    <p class="my-3">Generation: {{generation.generation.name }}</p> 
+                </div>
+            </div>
+            <div class="col my-4 mx-auto cl-img" *ngIf="pokemon">
+                <img [src]="pokemon.sprites.front_default" alt="Imagen de {{pokemon.name}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a routerLink="/list-pokemon" class="btn btn-light mx-3 my-2">Go back to Pokedex</a>
+            </div>
+        </div>
+    </div>
+</app-navbar>

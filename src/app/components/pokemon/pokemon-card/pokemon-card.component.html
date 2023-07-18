@@ -1,7 +1,7 @@
 <div class="card my-2 mx-3" style="width: 18rem;">
-    <img src="{{pokemon.sprites.front_default}}" alt="Imagen de {{pokemon.name}}">
+    <img [src]="pokemon.sprites.front_default" alt="Imagen de {{pokemon.name}}">
     <div class="card-body">
         <h5 class="card-title">{{pokemon.name | titlecase}}</h5>
-        <a routerLink="/details/{{pokemon.id}}" class="btn btn-info">See more</a>
+        <a [routerLink]="['/details', pokemon.id]" class="btn btn-info">See more</a>
     </div>
 </div>

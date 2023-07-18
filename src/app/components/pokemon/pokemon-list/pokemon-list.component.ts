@@ -12,7 +12,7 @@ export class PokemonListComponent {
   constructor(private pokeService: PokemonService){}
   
 
-  ngOnInit(){
+  ngOnInit(): void{
     this.pokemons = this.pokeService.getRandomPokemons();
   }
 }

@@ -1,0 +1,20 @@
+.container{
+    padding: 35px;
+    margin-top: 100px;
+    background-color: rgb(250, 246, 240);
+    box-shadow: 0px 0px 10px 0px black;
+    width: 50%;
+}
+
+p{
+    font-size: large;
+}
+
+.btn{
+    box-shadow: 1px 1px 5px 0px black;
+    float: right;
+}
+
+.cl-img{
+    text-align: center;
+}
